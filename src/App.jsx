@@ -800,7 +800,7 @@ context: client ? { org: client.org, plan: client.plan, workers: client.workers,
 });
 if (!res.ok) throw new Error();
 const data = await res.json();
-setMsgs([...next, { role: "assistant", content: data.reply || "No response received." }]);
+setMsgs([...next, { role: "assistant", content: data.content?.[0]?.text || "No response received." }]);
 } catch {
 setMsgs([...next, { role: "assistant", content: "Server error. Please check your connection and try again." }]);
 } finally { setLoading(false); }
