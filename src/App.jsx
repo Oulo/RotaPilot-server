@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useCallback, useMemo } from "react";
 
-const BACKEND_URL = "https://rosterwise-server.onrender.com"; // <-- replace with your backend URL
+const BACKEND_URL = "https://rotapilot.onrender.com";
 
 const F = {
   dark:"#1a3d2b", mid:"#2d6a4f", amber:"#d97706", amberL:"#f59e0b",
